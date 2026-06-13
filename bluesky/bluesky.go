@@ -129,7 +129,9 @@ func (c *Client) do(ctx context.Context, rawURL string) ([]byte, bool, error) {
 	if resp.StatusCode == http.StatusBadRequest {
 		b, _ := io.ReadAll(io.LimitReader(resp.Body, 4<<10))
 		// Extract the XRPC message if present.
-		var e struct{ Message string `json:"message"` }
+		var e struct {
+			Message string `json:"message"`
+		}
 		_ = json.Unmarshal(b, &e)
 		if e.Message != "" {
 			return nil, false, fmt.Errorf("%w: %s", ErrBadRequest, e.Message)

@@ -7,15 +7,15 @@ import (
 
 // Profile is the record emitted for a Bluesky user profile.
 type Profile struct {
-	Handle          string `json:"handle"`
-	DisplayName     string `json:"display_name"`
-	DID             string `json:"did"`
-	Description     string `json:"description"`
-	FollowersCount  int    `json:"followers_count"`
-	FollowsCount    int    `json:"follows_count"`
-	PostsCount      int    `json:"posts_count"`
-	IndexedAt       string `json:"indexed_at"`
-	URL             string `json:"url"`
+	Handle         string `json:"handle"`
+	DisplayName    string `json:"display_name"`
+	DID            string `json:"did"`
+	Description    string `json:"description"`
+	FollowersCount int    `json:"followers_count"`
+	FollowsCount   int    `json:"follows_count"`
+	PostsCount     int    `json:"posts_count"`
+	IndexedAt      string `json:"indexed_at"`
+	URL            string `json:"url"`
 }
 
 // Post is the record emitted for a post in an author feed.
@@ -107,13 +107,13 @@ type wireFeedItem struct {
 }
 
 type wirePostView struct {
-	URI         string      `json:"uri"`
-	Author      wireAuthor  `json:"author"`
-	Record      wireRecord  `json:"record"`
-	LikeCount   int         `json:"likeCount"`
-	RepostCount int         `json:"repostCount"`
-	ReplyCount  int         `json:"replyCount"`
-	IndexedAt   string      `json:"indexedAt"`
+	URI         string     `json:"uri"`
+	Author      wireAuthor `json:"author"`
+	Record      wireRecord `json:"record"`
+	LikeCount   int        `json:"likeCount"`
+	RepostCount int        `json:"repostCount"`
+	ReplyCount  int        `json:"replyCount"`
+	IndexedAt   string     `json:"indexedAt"`
 }
 
 type wireAuthor struct {
@@ -187,10 +187,10 @@ type wireStarterPacksResponse struct {
 }
 
 type wireStarterPackView struct {
-	URI    string                     `json:"uri"`
-	Record wireStarterPackRecord      `json:"record"`
-	Creator wireAuthor                `json:"creator"`
-	ListItemCount int                 `json:"listItemCount"`
+	URI           string                `json:"uri"`
+	Record        wireStarterPackRecord `json:"record"`
+	Creator       wireAuthor            `json:"creator"`
+	ListItemCount int                   `json:"listItemCount"`
 }
 
 type wireStarterPackRecord struct {

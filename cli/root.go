@@ -19,10 +19,10 @@ var (
 
 // exit codes.
 const (
-	exitError      = 1
-	exitUsage      = 2
-	exitNoData     = 3
-	exitRateLimit  = 5
+	exitError     = 1
+	exitUsage     = 2
+	exitNoData    = 3
+	exitRateLimit = 5
 )
 
 // ExitError carries a process exit code up to main.
