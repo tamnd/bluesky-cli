@@ -204,6 +204,11 @@ func (c *Client) GetProfile(ctx context.Context, actor string) (Profile, error) 
 	return profileFromWire(w), nil
 }
 
+// GetPosts returns up to limit recent posts by actor.
+func (c *Client) GetPosts(ctx context.Context, actor string, limit int) ([]Post, error) {
+	return c.GetAuthorFeed(ctx, actor, limit)
+}
+
 // GetAuthorFeed returns up to limit recent posts by actor.
 func (c *Client) GetAuthorFeed(ctx context.Context, actor string, limit int) ([]Post, error) {
 	if limit <= 0 {
