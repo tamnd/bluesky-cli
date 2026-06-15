@@ -23,6 +23,7 @@ type Post struct {
 	Rank        int    `json:"rank"`
 	URI         string `json:"uri" kit:"id"`
 	Author      string `json:"author"`
+	AuthorName  string `json:"author_name"`
 	Text        string `json:"text"`
 	LikeCount   int    `json:"like_count"`
 	RepostCount int    `json:"repost_count"`
@@ -219,6 +220,7 @@ func postFromWire(p wirePostView, rank int) Post {
 		Rank:        rank,
 		URI:         p.URI,
 		Author:      p.Author.Handle,
+		AuthorName:  p.Author.DisplayName,
 		Text:        p.Record.Text,
 		LikeCount:   p.LikeCount,
 		RepostCount: p.RepostCount,

@@ -91,6 +91,7 @@ sponsored by Bluesky Social PBC or the AT Protocol project.`,
 
 	root.AddCommand(
 		app.profileCmd(),
+		app.postsCmd(),
 		app.userCmd(),
 		app.searchCmd(),
 		app.feedsCmd(),
