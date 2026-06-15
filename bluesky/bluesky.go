@@ -23,6 +23,10 @@ import (
 
 const defaultBaseURL = "https://public.api.bsky.app/xrpc"
 
+// Host is the Bluesky web frontend hostname. It is used by the kit domain to
+// claim ownership of bsky.app URLs pasted into a multi-domain host.
+const Host = "bsky.app"
+
 // DefaultUserAgent identifies the client to the Bluesky API.
 const DefaultUserAgent = "bsky/dev (+https://github.com/tamnd/bluesky-cli)"
 

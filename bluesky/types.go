@@ -7,7 +7,7 @@ import (
 
 // Profile is the record emitted for a Bluesky user profile.
 type Profile struct {
-	Handle         string `json:"handle"`
+	Handle         string `json:"handle" kit:"id"`
 	DisplayName    string `json:"display_name"`
 	DID            string `json:"did"`
 	Description    string `json:"description"`
@@ -21,7 +21,7 @@ type Profile struct {
 // Post is the record emitted for a post in an author feed.
 type Post struct {
 	Rank        int    `json:"rank"`
-	URI         string `json:"uri"`
+	URI         string `json:"uri" kit:"id"`
 	Author      string `json:"author"`
 	Text        string `json:"text"`
 	LikeCount   int    `json:"like_count"`
@@ -34,7 +34,7 @@ type Post struct {
 // Actor is the record emitted for a search result, follower, or following.
 type Actor struct {
 	Rank        int    `json:"rank"`
-	Handle      string `json:"handle"`
+	Handle      string `json:"handle" kit:"id"`
 	DisplayName string `json:"display_name"`
 	DID         string `json:"did"`
 	Description string `json:"description"`
@@ -45,7 +45,7 @@ type Actor struct {
 // FeedGenerator is the record emitted for a popular feed generator.
 type FeedGenerator struct {
 	Rank        int    `json:"rank"`
-	URI         string `json:"uri"`
+	URI         string `json:"uri" kit:"id"`
 	DisplayName string `json:"display_name"`
 	Creator     string `json:"creator"`
 	Description string `json:"description"`
@@ -56,14 +56,14 @@ type FeedGenerator struct {
 // TrendingTopic is the record emitted for a trending topic.
 type TrendingTopic struct {
 	Rank  int    `json:"rank"`
-	Topic string `json:"topic"`
+	Topic string `json:"topic" kit:"id"`
 	Link  string `json:"link"`
 }
 
 // ThreadPost is the record emitted for a post in a thread traversal (DFS order).
 type ThreadPost struct {
 	Depth       int    `json:"depth"`
-	URI         string `json:"uri"`
+	URI         string `json:"uri" kit:"id"`
 	Author      string `json:"author"`
 	Text        string `json:"text"`
 	LikeCount   int    `json:"like_count"`
@@ -76,7 +76,7 @@ type ThreadPost struct {
 // StarterPack is the record emitted for a starter pack created by a user.
 type StarterPack struct {
 	Rank        int    `json:"rank"`
-	URI         string `json:"uri"`
+	URI         string `json:"uri" kit:"id"`
 	Name        string `json:"name"`
 	Creator     string `json:"creator"`
 	Description string `json:"description"`
